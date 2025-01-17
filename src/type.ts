@@ -73,7 +73,7 @@ export type SwitchEffect = {
 	// 前のeffectのresponseのobjectのうち、参照したいkeyを指定
 	referenceKey: string;
 	cases: {
-		[key: string]: EffectId; // key: 評価結果に対するケース(e.g., "2", "matched", "unmatched", "default")
+		[key: string]: EffectId; // key: 評価結果に対するケース(e.g., "2", "matched", "unmatched")
 	};
 	default: EffectId | null;
 	error: EffectId | null;
@@ -243,7 +243,7 @@ export type ResultOrder = {
 };
 
 export type GameConfig = {
-	functions: {
+	customFunctions: {
 		[functionId: FunctionId]: GameFunction;
 	};
 	cardPool: {
